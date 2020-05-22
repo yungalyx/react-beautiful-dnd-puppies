@@ -5,7 +5,7 @@ import Header from './components/Header';
 import './App.css';
 import PuppyList from './components/PuppyList';
 import { Button } from '@material-ui/core';
-import SaveIcon from '@material-ui/icons/Save';
+import { motion } from 'framer-motion';
 
 export default class App extends React.Component{
  
@@ -140,28 +140,36 @@ export default class App extends React.Component{
   render() {
     return (
       <div>
-            
-          <Header title='- by Alex Lin'/>
-          <div style={{textAlign:'center'}}>
-            <Button 
-                onClick={this.writeJSON}    
-                variant="contained"               
-                color="secondary"
-                size="small"
-                
-            > Save </Button>
-          </div>
-          <DragDropContext onDragEnd={result => this.onDragEnd(result)}>
-            <div style={{margin: '0px 25%'}}>
-              <div style={{ float: 'left', display: 'flex', justifyContent: 'center', height: '100%', backgroundColor: '#D8C3A5'}}>
-                {<PuppyList puppies={this.state.list1} header='List 1' /> }
-              </div>
-              <div style={{float: 'right', display: 'flex', justifyContent: 'left', height:'100%', backgroundColor: '#D8C3A5'}}>
-                {<PuppyList puppies={this.state.list2} header='List 2' /> }
+        <motion.div initial={{opacity: 0, y: -150 }}
+                    animate={{opacity: 1, y:0}}
+                    transition={{duration: 3}}>
+           <Header title='- by Alex Lin'/> 
+        </motion.div>
+      
+     
+         
+        <div style={{textAlign:'center', margin:'20px'}}>
+          <Button 
+              onClick={this.writeJSON}    
+              variant="contained"               
+              color="secondary"
+              size="small"
+              
+          > Save 
+          </Button>
+        </div>
+
+        <DragDropContext onDragEnd={result => this.onDragEnd(result)}>
+          <div style={{margin: '0px 25%'}}>
+            <div style={{ float: 'left', display: 'flex', justifyContent: 'center', height: '100%', backgroundColor: '#D8C3A5'}}>
+              {<PuppyList puppies={this.state.list1} header='List 1' /> }
+            </div>
+            <div style={{float: 'right', display: 'flex', justifyContent: 'left', height:'100%', backgroundColor: '#D8C3A5'}}>
+              {<PuppyList puppies={this.state.list2} header='List 2' /> }
             </div>
           </div>
         </DragDropContext >
-        
+      
       </div>
     )
   }

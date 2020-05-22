@@ -12,7 +12,6 @@ const Container = styled.div`
 `;
 
 const PuppyNametag = (props) => {
-    console.log("PROPS: " + props.uniqueid)
     return (
       <Draggable draggableId={props.name} index={props.index}>
         {(provided, snapshot)=> (
