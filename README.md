@@ -2,11 +2,16 @@
 
 After extracting from zip file or cloning the repo, navigate the project folder with command lines 
  
-    cd Desktop
-    cd puppy-app
+    // method 1: running from zip 
+    cd Desktop // unless you put it somewhere else
+    cd puppy-app // this might be called something different so 
     npm install 
     npm start
-
+    
+    // method 2: cloning to IDE (open a new integrated terminal in the IDE and it will automatically path to this project)
+    npm install 
+    npm start
+    
 it will take a little while(~30sec) to build. (node and their dependecies, not me!)
 
 <h3> Challenges I ran into and how I fixed them </h3>
@@ -31,5 +36,10 @@ it will take a little while(~30sec) to build. (node and their dependecies, not m
         
         <ComponentA id={val.id} name={val.name} key={index} useableprop={index} />   // instead of accessing key, i can access useableprop.
         
- **Challenge #3:** conflicts between react-styling, styled-components, css stylesheets:
-<p> aside from learning quite a lot about styling, javascript box models, and layouts. I learned about styling conflicts... which are going to be invisable and frustrating if you haven't added color swatches. This debug was only possible as I learned more and more about css styling conventions. </p>
+ **Challenge #3:** conflicts between react-styling, styled-components, css stylesheets
+<p> aside from learning quite a lot about styling, javascript box models, and layouts. I learned about styling conflicts... which are going to be invisible and frustrating if you haven't added color swatches. This debug was only possible as I learned more and more about css styling conventions. </p>
+
+<h3> Areas of strength </h3> 
+**Strength 1**: Manipulating / iterating over lists
+<p> Parsing the json data from fetch api, manipulating them so React components can be built with them(see Challenge# 1), and finally mapping an array into another json object for download. There was a lot of mistakes that could be made while going through these iterations but I was able to overcome these challenges by being careful, console.logging the results, and making sure I 'copied' data before mutating them. </p>
+
