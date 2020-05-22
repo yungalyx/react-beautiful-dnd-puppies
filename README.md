@@ -40,6 +40,30 @@ it will take a little while(~30sec) to build. (node and their dependecies, not m
 <p> aside from learning quite a lot about styling, javascript box models, and layouts. I learned about styling conflicts... which are going to be invisible and frustrating if you haven't added color swatches. This debug was only possible as I learned more and more about css styling conventions. </p>
 
 <h3> Areas of strength </h3> 
-**Strength 1**: Manipulating / iterating over lists
-<p> Parsing the json data from fetch api, manipulating them so React components can be built with them(see Challenge# 1), and finally mapping an array into another json object for download. There was a lot of mistakes that could be made while going through these iterations but I was able to overcome these challenges by being careful, console.logging the results, and making sure I 'copied' data before mutating them. </p>
+
+**Strength #1:** Manipulating / iterating over lists
+<p> Parsing the json data from fetch api, manipulating them so React components can be built with them(see Challenge# 1), and finally mapping an array into another json object for download. There was a lot of mistakes that could be made while going through these iterations but I was able to overcome these challenges by breaking up the reordering process into multiple helper functions, console.logging the results, and making sure I 'copied' data before mutating them. </p>
+
+    // API gave names in keys
+    {"message":
+       {"affenpinscher":[],
+        "african":[],
+        "airedale":[],
+        ...}}
+        
+     // i parsed the data into this for easier access and manipulation
+     state = {
+           loading: true, 
+           list1: [...],
+           list2: [ {id: 1, name: "affenpinscher"},
+                    {id: 2, name: "african"},
+                    ...]};
+                    
+      // and reordering to this form everytime 'save' is pressed, required multiple map functions
+      “dogBreeds”: {
+         “breed1Total”: {this.state.list1.length}
+         “breed2Total”: {this.state.list2.length},
+         “breed1Rank”: { 
+               “rank1”: {...
+     
 
