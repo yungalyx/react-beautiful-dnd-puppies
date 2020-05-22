@@ -30,3 +30,6 @@ it will take a little while(~30sec) to build. (node and their dependecies, not m
         <ComponentA id={val.id} name={val.name} key={index} />   // accessing key as a prop would return NaN, which didn't TRIGGER any ERROrs or warnings.
         
         <ComponentA id={val.id} name={val.name} key={index} useableprop={index} />   // instead of accessing key, i can access useableprop.
+        
+ **Challenge #3:** conflicts between react-styling, styled-components, css stylesheets:
+<p> aside from learning quite a lot about styling, javascript box models, and layouts. I learned about styling conflicts... which are going to be invisable and frustrating if you haven't added color swatches. This debug was only possible as I learned more and more about css styling conventions. </p>
