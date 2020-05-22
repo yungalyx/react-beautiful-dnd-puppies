@@ -11,7 +11,7 @@ it will take a little while(~30sec) to build. (node and their dependecies, not m
 
 <h3> Challenges I ran into and how I fixed them </h3>
 
-**Challenge #1: Redefining data structure
+**Challenge #1**: Redefining data structure
 <p> When I made the fetch call from the API, I had initially stored the data (dog breeds) into an array. This made the most sense as I could rank the breed based on index, however, this lead to additional problems when I needed to reorder breeds in the list with beautiful-react-dnd. One of the challnges was persisting an ID for each <Draggable> element that doesn't change... as the lists rerender everytime we move breeds around, this meant we also set new ids for each breed on the array. Redefining my data structure into an array of objects allowed me to maintain a unique ID. </p>
     
     originalArray = ['borzoi', 'cockapoo', 'poodle', 'bullterrier' ...];
@@ -23,7 +23,7 @@ it will take a little while(~30sec) to build. (node and their dependecies, not m
       3: {id: 4, name: "bullterrier "}
       ...];
 
-**Challenge #2: Not allowed to pass key as props
+**Challenge #2**: Not allowed to pass key as props
  <p> react.js doesn't actually allow passing of props designated as keys, which became a big issue when I keep trying to access key values for Draggable's unique id. (Thought I would be killling two birds with one stone by only needing to pass a single prop) this issue was solved by passing an additional prop labeled as something else. I know this sounds like an easy fix, but I literally couldn't figure out what the issue was for a few hours. 
  </p>
  
