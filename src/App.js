@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Header from './components/Header';
 import './App.css';
-import PuppyNametag from './components/PuppyNametag';
 import PuppyList from './components/PuppyList';
+import { Button } from '@material-ui/core';
+import SaveIcon from '@material-ui/icons/Save';
 
 export default class App extends React.Component{
  
@@ -67,6 +68,11 @@ export default class App extends React.Component{
     if (!result.destination) { return;}
 
     const {source, destination} = result;
+
+    if ((this.state.list1.length <= 1 && source.droppableId == 'List 1')|| (this.state.list2.length <= 1 && source.droppableId == 'List 2')) {
+      alert('Woof Invalid Action Woof');
+      return;
+    }  
     
     const copieditems = [...this.state.list1]; 
     const copieditems2 = [...this.state.list2];
@@ -95,22 +101,67 @@ export default class App extends React.Component{
     }
     this.setState(newState);
   }
+
+  writeJSON = () => {
+    const list1copy = [...this.state.list1];
+    const list2copy = [...this.state.list2];
+
+    var breed1 = {};
+    var breed2 = {};
+    for (let i = 0; i < list1copy.length; i++){
+      breed1["rank" + (i+1)] = list1copy[i].name;
+    }
+    for (let c =0; c < list2copy.length; c++) {
+      breed2['rank' + (c+1)] = list2copy[c].name;
+    }
+   
+    var data = {"dogBreeds": {
+                    'breed1total': this.state.list1.length,
+                    'breed2total': this.state.list2.length,
+                    'breed1rank': breed1,
+                    'breed2rank': breed2
+                  }
+                }
+                
+    const json = JSON.stringify(data, null, 3);
     
+    // pushing to download 
+    const blob = new Blob([json], {type: 'text/json'});
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.setAttribute('hidden', '');
+    a.setAttribute('href', url);
+    a.setAttribute('download', 'alexander-lin.txt');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
 
   render() {
     return (
-      <div>  
-        <DragDropContext onDragEnd={result => this.onDragEnd(result)}>
-          <div>
-            <Header title='- by Alex Lin'/>
+      <div>
+            
+          <Header title='- by Alex Lin'/>
+          <div style={{textAlign:'center'}}>
+            <Button 
+                onClick={this.writeJSON}    
+                variant="contained"               
+                color="secondary"
+                size="small"
+                
+            > Save </Button>
           </div>
-          <div style={{ float: 'left', display: 'flex', justifyContent: 'center', height: '100%', backgroundColor: 'teal'}}>
-            {<PuppyList puppies={this.state.list1} header='List 1' /> }
-          </div>
-          <div style={{float: 'right', display: 'flex', justifyContent: 'left', height:'100%'}}>
-            {<PuppyList puppies={this.state.list2} header='List 2' /> }
+          <DragDropContext onDragEnd={result => this.onDragEnd(result)}>
+            <div style={{margin: '0px 25%'}}>
+              <div style={{ float: 'left', display: 'flex', justifyContent: 'center', height: '100%', backgroundColor: '#D8C3A5'}}>
+                {<PuppyList puppies={this.state.list1} header='List 1' /> }
+              </div>
+              <div style={{float: 'right', display: 'flex', justifyContent: 'left', height:'100%', backgroundColor: '#D8C3A5'}}>
+                {<PuppyList puppies={this.state.list2} header='List 2' /> }
+            </div>
           </div>
         </DragDropContext >
+        
       </div>
     )
   }

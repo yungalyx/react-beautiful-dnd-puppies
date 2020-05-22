@@ -5,20 +5,26 @@ import { Droppable } from 'react-beautiful-dnd';
 
 
 const Container = styled.div`
-    margin: 8px;
     border: 1px solid lightgrey;
     border-radius: 2px;
 `;
 
 const Tasklist = styled.div`
-    padding: 8px;
+    padding: 10px;
+    background-color: #D8C3A5;
+`;
+
+const ListHeader = styled.h2`
+    margin: 6px 12px;
+    font-size: 22px;
+
 `;
 
 export default class PuppyList extends React.Component{
     render() {
         return (
             <Container>
-                <h2> {this.props.header} </h2>
+                <ListHeader> Rank |  {this.props.header} </ListHeader>
                 <Droppable droppableId={this.props.header}>
                     {provided => (
                          <Tasklist 

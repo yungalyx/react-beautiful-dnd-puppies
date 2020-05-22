@@ -3,13 +3,11 @@ import styled from 'styled-components'
 import {Draggable} from 'react-beautiful-dnd'
 
 const Container = styled.div`
-  padding: 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
   margin-bottom: 8px;
-  background-color: green;
+  height: 42px;
+  background-color: #E85A4F;
   &:hover {
-   background-color: yellow;
+   background-color: #E98074;
  }
 `;
 
@@ -24,10 +22,10 @@ const PuppyNametag = (props) => {
             {...provided.innerRed}
             ref={provided.innerRef}
             >
-              <div style={{ float: 'left'}}>
-                {props.index}
+              <div style={{ float: 'left', textAlign:'center', height: '20px', width: '20px', border: 'solid white 1px', color: 'white', padding: '5px', margin: '5px'}}>
+                {props.index+1}
               </div>
-              <div style ={{ float: 'right'}}>
+              <div style ={{ float: 'left', color: 'white', padding: '5px', margin: '5px', }}>
                 {props.name.toUpperCase()} 
               </div>
           </Container>
