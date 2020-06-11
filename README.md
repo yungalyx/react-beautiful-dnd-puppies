@@ -1,18 +1,4 @@
-<h2> How to run </h2>
-
-After extracting from zip file or cloning the repo, navigate the project folder with command lines 
- 
-    // method 1: running from zip 
-    cd Desktop // unless you put it somewhere else
-    cd puppy-app // this might be called something different so 
-    npm install 
-    npm start
-    
-    // method 2: cloning to IDE (open a new integrated terminal in the IDE and it will automatically path to this project)
-    npm install 
-    npm start
-    
-it will take a little while(~30sec) to build. (node and their dependecies, not me!)
+<h5> react-beautiful-dnd-puppies app should now be hosted through github pages! Link: https://yungalyx.github.io/react-beautiful-dnd-puppies/ </h5>
 
 <h3> Challenges I ran into and how I fixed them </h3>
 
