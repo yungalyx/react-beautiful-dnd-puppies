@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/yungalyx/react-beautiful-dnd-puppies/static/css/main.fa969550.chunk.css",
-    "main.js": "/yungalyx/react-beautiful-dnd-puppies/static/js/main.4f9b4722.chunk.js",
-    "main.js.map": "/yungalyx/react-beautiful-dnd-puppies/static/js/main.4f9b4722.chunk.js.map",
-    "runtime-main.js": "/yungalyx/react-beautiful-dnd-puppies/static/js/runtime-main.86a63104.js",
-    "runtime-main.js.map": "/yungalyx/react-beautiful-dnd-puppies/static/js/runtime-main.86a63104.js.map",
-    "static/js/2.cc080883.chunk.js": "/yungalyx/react-beautiful-dnd-puppies/static/js/2.cc080883.chunk.js",
-    "static/js/2.cc080883.chunk.js.map": "/yungalyx/react-beautiful-dnd-puppies/static/js/2.cc080883.chunk.js.map",
-    "index.html": "/yungalyx/react-beautiful-dnd-puppies/index.html",
-    "precache-manifest.cf7f189b0d03e96e2af28f10f51b8307.js": "/yungalyx/react-beautiful-dnd-puppies/precache-manifest.cf7f189b0d03e96e2af28f10f51b8307.js",
-    "service-worker.js": "/yungalyx/react-beautiful-dnd-puppies/service-worker.js",
-    "static/css/main.fa969550.chunk.css.map": "/yungalyx/react-beautiful-dnd-puppies/static/css/main.fa969550.chunk.css.map",
-    "static/js/2.cc080883.chunk.js.LICENSE.txt": "/yungalyx/react-beautiful-dnd-puppies/static/js/2.cc080883.chunk.js.LICENSE.txt"
+    "main.css": "/react-beautiful-dnd-puppies/static/css/main.fa969550.chunk.css",
+    "main.js": "/react-beautiful-dnd-puppies/static/js/main.4f9b4722.chunk.js",
+    "main.js.map": "/react-beautiful-dnd-puppies/static/js/main.4f9b4722.chunk.js.map",
+    "runtime-main.js": "/react-beautiful-dnd-puppies/static/js/runtime-main.f139b367.js",
+    "runtime-main.js.map": "/react-beautiful-dnd-puppies/static/js/runtime-main.f139b367.js.map",
+    "static/js/2.cc2f0451.chunk.js": "/react-beautiful-dnd-puppies/static/js/2.cc2f0451.chunk.js",
+    "static/js/2.cc2f0451.chunk.js.map": "/react-beautiful-dnd-puppies/static/js/2.cc2f0451.chunk.js.map",
+    "index.html": "/react-beautiful-dnd-puppies/index.html",
+    "precache-manifest.fbbe486f6223edea9b9c8836d1011aee.js": "/react-beautiful-dnd-puppies/precache-manifest.fbbe486f6223edea9b9c8836d1011aee.js",
+    "service-worker.js": "/react-beautiful-dnd-puppies/service-worker.js",
+    "static/css/main.fa969550.chunk.css.map": "/react-beautiful-dnd-puppies/static/css/main.fa969550.chunk.css.map",
+    "static/js/2.cc2f0451.chunk.js.LICENSE.txt": "/react-beautiful-dnd-puppies/static/js/2.cc2f0451.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.86a63104.js",
-    "static/js/2.cc080883.chunk.js",
+    "static/js/runtime-main.f139b367.js",
+    "static/js/2.cc2f0451.chunk.js",
     "static/css/main.fa969550.chunk.css",
     "static/js/main.4f9b4722.chunk.js"
   ]
