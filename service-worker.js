@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-beautiful-dnd-puppies/precache-manifest.fbbe486f6223edea9b9c8836d1011aee.js"
+  "/react-beautiful-dnd-puppies/precache-manifest.63cb7023db04a2061dc5f1faf3e7e11b.js"
 );
 
 self.addEventListener('message', (event) => {
